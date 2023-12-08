@@ -1,4 +1,5 @@
 public class Personal  implements Comparable<Personal>{
+    public int index;
     private String name;
     private String position;
     private  int phoneNumber;

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 //это лекарство
-public class Pharmacy implements Iterable<PharmacyComponent>,Comparable{
+public class Pharmacy implements Iterable<PharmacyComponent>,Comparable<Pharmacy>{
     private List<PharmacyComponent> components = new ArrayList<>();
     private int index = 0;
     private int id;
@@ -78,7 +78,13 @@ public class Pharmacy implements Iterable<PharmacyComponent>,Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Pharmacy o) {
+        if(this.index>o.index){
+            return 1;
+        }
+        else if (this.index<o.index){
+            return -1;
+        }
         return 0;
     }
 }

@@ -56,5 +56,18 @@ public class Main {
 
         Set<Pharmacy> result = new HashSet<>(Arrays.asList(pharmacy1, pharmacy2, pharmacy3,pharmacy4));
         System.out.println(result.size()); // Выводит количество уникальных экземпляров Pharmacy
+
+
+        List<Pharmacy> sort = new ArrayList<>();
+        sort.add(pharmacy1);
+        sort.add(pharmacy3);
+        sort.add(pharmacy4);
+        sort.add(pharmacy2);
+        sort.add(pharmacy1);
+
+        Collections.sort(sort);
+        System.out.println("//////////////////////////");
+        System.out.println(sort); // сортировка по индексу
     }
+
 }
